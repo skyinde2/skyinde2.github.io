@@ -1,26 +1,13 @@
 "use strict";
-function getVideoSrc(src) {
-    if (src.includes("poster_")) {
-        const start = src.indexOf("poster_");
-        const end = src.lastIndexOf(".");
-        const name = src.substring(start + 7, end);
-        return `assets/${name}.mp4`;
-    }
-    else {
-        return null;
-    }
-}
 const playPauseObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         const video = entry.target;
         if (entry.isIntersecting) {
             if (video.readyState >= 2) {
-                video.loop = true;
                 video.play();
             }
             else {
                 video.oncanplay = () => {
-                    video.loop = true;
                     video.play();
                     video.oncanplay = null;
                 };
@@ -36,6 +23,17 @@ const playPauseObserver = new IntersectionObserver(entries => {
         }
     });
 });
+function getVideoSrc(src) {
+    if (src.includes("poster_")) {
+        const start = src.indexOf("poster_");
+        const end = src.lastIndexOf(".");
+        const name = src.substring(start + 7, end);
+        return `assets/${name}.mp4`;
+    }
+    else {
+        return null;
+    }
+}
 const containers = document.getElementsByClassName("view-container");
 for (const container of containers) {
     const block = container.getElementsByClassName("view-block")[0];

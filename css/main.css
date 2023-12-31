@@ -65,6 +65,10 @@ body {
   font-style: oblique;
   font-weight: bold;
 }
+#root #tab .tabButton img {
+  width: auto;
+  height: 100%;
+}
 #root #content {
   position: relative;
   width: 740px;
