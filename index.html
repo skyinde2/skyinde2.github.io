@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/prism-duotone-light.css">
+    <script src="/js/view.js" defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    
+    <div id="root">
+      <div id="tab">
+        <div id="welcome">
+          <p>Hi, I'm Liyang Chen.</p>
+          <p>This page showcases some of my past work as a mobile game developer.</p>
+        </div>
+        <div class="tabButton">
+          <p>Rendering</p><img src='/assets/rendering.png' />
+        </div>
+        <div class="tabButton">
+          <p>Optimization</p><img src='/assets/optimization.png' />
+        </div>
+        <div class="tabButton">
+          <p>Tooling</p><img src='/assets/tools.png' />
+        </div>
+        <div class="tabButton">
+          <p>Pipeline</p><img src='/assets/pipeline.png' />
+        </div>
+      </div>
+      <div id="content">
+        <div id="rendering" class="section">
+<div class="section-bg"></div>
+<h1>Rendering</h1>
+<div class="view-container">
+  <div class="view-block">
+    <div>
+      <img>
+      <video></video>
+    </div>
+    <div class="view-desc">
+<h2>Kart Decal</h2>
+<ul>
+<li>
+<p>User customizable car decals.</p>
+  </div>
+</div>
+<div class="view-list"><img src="assets/poster_decal.webp"></div>
+</li>
+</ul>
+</div>
+<div class="view-container">
+  <div class="view-block">
+    <div>
+      <img>
+      <video></video>
+    </div>
+    <div class="view-desc">
+<h2>Optimized Blob Shadow</h2>
+<ul>
+<li>
+<p>Works like a projector without flickering on uneven surfaces. The mesh for rendering is dynamically generated to reduce overdraw.</p>
+  </div>
+</div>
+<div class="view-list"><img src="assets/poster_blob.webp"></div>
+</li>
+</ul>
+</div>
+<div class="view-container">
+  <div class="view-block">
+    <div>
+      <img>
+      <video></video>
+    </div>
+    <div class="view-desc">
+<h2>Capsule Shadow</h2>
+<ul>
+<li>
+<p>Simulates the effect of spotlight shadows within a stadium for enhanced performance and visual representation.</p>
+  </div>
+</div>
+<div class="view-list"><img src="assets/poster_capsule.webp"></div>
+</li>
+</ul>
+</div>
+<div class="view-container">
+  <div class="view-block">
+    <div>
+      <img>
+      <video></video>
+    </div>
+    <div class="view-desc">
+<h2>Crowd Rendering</h2>
+<ul>
+<li>
+<p>Bakes animation data into texture array and makes skinning calculation in shader.</p>
+  </div>
+</div>
+<div class="view-list"><img src="assets/crowd.webp"></div>
+</li>
+</ul>
+</div>
+<div class="view-container">
+  <div class="view-block">
+    <div>
+      <img>
+      <video></video>
+    </div>
+    <div class="view-desc">
+<h2>Reflection Effect</h2>
+<ul>
+<li>
+<p>Reflection objects are rendered in a separate pass and then sampled with distortion based on normals and ground height.</p>
+  </div>
+</div>
+<div class="view-list"><img src="assets/reflection.webp"></div>
+</li>
+</ul>
+</div>
+<div class="view-container">
+  <div class="view-block">
+    <div>
+      <img>
+      <video></video>
+    </div>
+    <div class="view-desc">
+<h2>Post Processing</h2>
+<ul>
+<li>
+<p>Includes some mobile-optimized post effects such as depth of field, radial blur, bloom, and LUT, filling in for missing features in earlier versions of Unity.</p>
+  </div>
+</div>
+<div class="view-list"><img src="assets/postprocess.webp"></div>
+</li>
+</ul>
+</div>
+</div>
+<div id="optimization" class="section">
+<div class="section-bg"></div>
+<h1>Optimization</h1>
+<div class="view-container">
+  <div class="view-block">
+    <div>
+      <img>
+      <video></video>
+    </div>
+    <div class="view-desc">
+<h2>Mesh LOD</h2>
+<ul>
+<li>
+<p>Some simplified models are generated at runtime after merging the meshes of user-customizable parts into a single one for batch reduction.</p>
+  </div>
+</div>
+<div class="view-list"><img src="assets/lod.webp"></div>
+</li>
+</ul>
+</div>
+<div class="view-container">
+  <div class="view-block">
+    <div>
+      <img>
+      <video></video>
+    </div>
+    <div class="view-desc">
+<h2>Instance rendering</h2>
+<ul>
+<li>
+<p>Additionally, objects are rendered through a custom native plugin on Android to minimize GLES call overhead introduced by Unity.</p>
+  </div>
+</div>
+<div class="view-list"><img src="assets/instance.webp"></div>
+</li>
+</ul>
+</div>
+<!-- 
+
+<div class="view-container">
+  <div class="view-block">
+    <div>
+      <img>
+      <video></video>
+    </div>
+    <div class="view-desc">
+      
+## Skinning Optimization
+- aaa
+
+    </div>
+  </div>
+  <div class="view-list"><img src="assets/instance.webp"></div>
+</div> -->
+<div class="view-container">
+  <div class="view-block">
+    <div>
+      <img>
+      <video></video>
+    </div>
+    <div class="view-desc">
+<h2>Occlusion Culling</h2>
+<ul>
+<li>
+<p>aaa</p>
+  </div>
+</div>
+<div class="view-list"><img src="assets/poster_pvs.webp"><img src="assets/pvs.webp"></div>
+</li>
+</ul>
+</div>
+<!-- 
+
+<div class="view-container">
+  <div class="view-block">
+    <div>
+      <img>
+      <video></video>
+    </div>
+    <div class="view-desc">
+      
+## Mesh Re
+- aaa
+
+    </div>
+  </div>
+  <div class="view-list"><img src="assets/pvs.webp"></div>
+</div> -->
+<!-- 
+
+<div class="view-container">
+  <div class="view-block">
+    <div>
+      <img>
+      <video></video>
+    </div>
+    <div class="view-desc">
+      
+## Video Player
+- aaa
+
+    </div>
+  </div>
+  <div class="view-list"><img src="assets/pvs.webp"></div>
+</div> -->
+</div>
+<div id="tooling" class="section">
+<div class="section-bg"></div>
+<h1>Tooling</h1>
+<div class="view-container">
+  <div class="view-block">
+    <div>
+      <img>
+      <video></video>
+    </div>
+    <div class="view-desc">
+<h2>Scene Atlas Tool</h2>
+<ul>
+<li>
+<p>Offline merges scene textures into atlases to optimize rendering performance.</p>
+  </div>
+</div>
+<div class="view-list"><img src="assets/atlas0.webp"><img src="assets/atlas1.webp"></div>
+</li>
+</ul>
+</div>
+<div class="view-container">
+  <div class="view-block">
+    <div>
+      <img>
+      <video></video>
+    </div>
+    <div class="view-desc">
+<h2>Collider Debugger</h2>
+<ul>
+<li>
+<p>Assists in identifying collider-related issues and making optimizations.</p>
+  </div>
+</div>
+<div class="view-list"><img src="assets/collider0.webp"><img src="assets/collider1.webp"></div>
+</li>
+</ul>
+</div>
+<div class="view-container">
+  <div class="view-block">
+    <div>
+      <img>
+      <video></video>
+    </div>
+    <div class="view-desc">
+<h2>Scene Scanner</h2>
+<ul>
+<li>
+<p>Automatically scans track scenes and generates rendering-related statistical data, assisting in identifying performance bottlenecks.</p>
+  </div>
+</div>
+<div class="view-list"><img src="assets/poster_scan.webp"></div>
+</li>
+</ul>
+</div>
+<div class="view-container">
+  <div class="view-block">
+    <div>
+      <img>
+      <video></video>
+    </div>
+    <div class="view-desc">
+<h2>Deep Profiling</h2>
+<ul>
+<li>
+<p>Utilizes a custom-implemented stack sampling method for deep profiling (different from statistical profiling) on mobile devices, enabling easy identification of performance hitches.</p>
+  </div>
+</div>
+<div class="view-list"><img src="assets/deep0.webp"><img src="assets/deep1.webp"></div>
+</li>
+</ul>
+</div>
+<!-- 
+
+<div class="view-container">
+  <div class="view-block">
+    <div>
+      <img>
+      <video></video>
+    </div>
+    <div class="view-desc">
+      
+## Managed Heap Profiler
+
+    </div>
+  </div>
+  <div class="view-list"><img src="assets/tp2.webp"></div>
+</div> -->
+<div class="view-container">
+  <div class="view-block">
+    <div>
+      <img>
+      <video></video>
+    </div>
+    <div class="view-desc">
+<h2>Performance Trending</h2>
+<p></div></p>
+  </div>
+  <div class="view-list"><img src="assets/trending0.webp"><img src="assets/trending1.webp"></div>
+</div>
+</div>
+<div id="pipeline" class="section">
+<div class="section-bg"></div>
+<h1>Pipeline</h1>
+<div class="view-container">
+  <div class="view-block">
+    <div>
+      <img>
+      <video></video>
+    </div>
+    <div class="view-desc">
+<h2>Procedural</h2>
+<p></div></p>
+  </div>
+  <div class="view-list"><img src="assets/procedural0.webp"><img src="assets/procedural1.webp"></div>
+</div>
+</div>
+        <img id="meow" src="/assets/meow.svg" />
+      </div>
+    </div>
+  </body>
+</html>
