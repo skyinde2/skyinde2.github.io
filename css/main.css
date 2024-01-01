@@ -1,17 +1,27 @@
-body {
-  font-family: sans-serif;
-  margin: 0px;
-  overflow-x: hidden;
-  overflow-y: scroll;
+html {
+  font-size: 1px;
 }
 
-#banner {
-  position: sticky;
-  top: 0px;
-  height: 40px;
-  background-image: linear-gradient(to bottom, #222222, #373737);
-  z-index: 1;
-  box-shadow: #000000 0px 0px 5px;
+@media screen and (min-width: 1500px) {
+  html {
+    font-size: 1.2px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  html {
+    font-size: 1.5px;
+  }
+}
+@media screen and (min-width: 2500px) {
+  html {
+    font-size: 1.8px;
+  }
+}
+body {
+  font-family: sans-serif;
+  margin: 0rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 #root {
@@ -19,162 +29,175 @@ body {
   justify-content: center;
   align-items: start;
 }
-#root #tab {
+
+#content {
+  position: relative;
+  width: 740rem;
+  padding-left: 80rem;
+}
+
+#tab {
   position: sticky;
-  top: 80px;
-  width: 200px;
+  top: 60rem;
+  width: 200rem;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 10rem;
   user-select: none;
 }
-#root #tab #welcome {
-  padding: 10px;
-  border-radius: 10px;
-  border: #000000 2px solid;
-  margin-bottom: 10px;
+
+#welcome {
+  padding: 10rem;
+  border-radius: 10rem;
+  border: #000000 2rem solid;
+  margin-bottom: 10rem;
   background-color: white;
-  box-shadow: rgb(53, 53, 53) 6px 6px;
+  box-shadow: rgb(53, 53, 53) 6rem 6rem;
 }
-#root #tab #welcome p {
-  font-size: 18px;
-  line-height: 25px;
+#welcome p {
+  font-size: 18rem;
+  line-height: 25rem;
 }
-#root #tab .tabButton {
-  height: 40px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 20px;
+
+.tabButton {
+  height: 40rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-right: 20rem;
   display: flex;
   justify-content: flex-end;
-  gap: 10px;
-  border: rgba(0, 0, 0, 0) 2px solid;
+  gap: 10rem;
+  border: rgba(0, 0, 0, 0) 2rem solid;
   cursor: pointer;
 }
-#root #tab .tabButton:hover {
-  border: black 2px dotted;
+.tabButton:hover {
+  border: black 2rem dotted;
 }
-#root #tab .tabButton.active {
-  border: black 2px solid;
+.tabButton.active {
+  border: black 2rem solid;
 }
-#root #tab .tabButton p {
-  margin: 0px;
-  line-height: 40px;
+.tabButton p {
+  margin: 0rem;
+  line-height: 40rem;
   text-align: center;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: oblique;
   font-weight: bold;
 }
-#root #tab .tabButton img {
+.tabButton img {
   width: auto;
   height: 100%;
 }
-#root #content {
+
+.section {
   position: relative;
-  width: 740px;
-  padding-left: 80px;
+  padding-top: 60rem;
+  padding-bottom: 40rem;
 }
-#root #content .section {
-  position: relative;
-  padding-top: 60px;
-  padding-bottom: 40px;
-}
-#root #content .section h1 {
-  margin-top: 0px;
-  margin-bottom: 30px;
-  font-size: 40px;
+.section h1 {
+  margin-top: 0rem;
+  margin-bottom: 30rem;
+  font-size: 40rem;
   color: white;
-  text-shadow: #4e4e4e 2px 2px;
-  -webkit-text-stroke: 1px #000000;
+  text-shadow: #4e4e4e 2rem 2rem;
+  -webkit-text-stroke: 1rem #000000;
 }
-#root #content .section .section-bg {
+
+.section-bg {
   position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: -10000px;
-  right: -10000px;
+  top: 0rem;
+  bottom: 0rem;
+  left: -10000rem;
+  right: -10000rem;
   z-index: -1;
 }
-#root #content #rendering .section-bg,
-#root #content #tooling .section-bg {
+
+#rendering .section-bg,
+#tooling .section-bg {
   background-color: #f2f2f2;
 }
-#root #content #optimization .section-bg,
-#root #content #pipeline .section-bg {
+
+#optimization .section-bg,
+#pipeline .section-bg {
   background-color: #e8e8e8;
 }
-#root #content #pipeline {
-  padding-bottom: 200px;
+
+#pipeline {
+  padding-bottom: 100rem;
 }
-#root #content #meow {
-  position: absolute;
-  height: 100px;
-  left: 170px;
-  bottom: 0px;
+
+#meow {
+  display: block;
+  object-fit: contain;
+  width: 100%;
+  height: 80rem;
+  background-color: #e8e8e8;
 }
-#root #content .view-container {
-  width: 750px;
-  margin-bottom: 40px;
+
+.view-container {
+  width: 750rem;
+  margin-bottom: 40rem;
   display: flex;
   flex-direction: row;
 }
-#root #content .view-container .view-block {
-  width: 600px;
+.view-container .view-block {
+  width: 600rem;
   display: flex;
   flex-direction: column;
   background-color: white;
   overflow: hidden;
-  border-radius: 10px;
-  border: #000000 1px solid;
-  box-shadow: rgb(0, 0, 0) 0px 0px 1px;
+  border-radius: 10rem;
+  border: #000000 1rem solid;
+  box-shadow: rgb(0, 0, 0) 0rem 0rem 1rem;
 }
-#root #content .view-container .view-block img {
+.view-container .view-block img {
   width: 100%;
   display: none;
 }
-#root #content .view-container .view-block video {
+.view-container .view-block video {
   width: 100%;
   display: none;
 }
-#root #content .view-container .view-block .view-desc {
-  border-top: black 1px solid;
-  padding-left: 20px;
-  padding-right: 20px;
+.view-container .view-block .view-desc {
+  border-top: black 1rem solid;
+  padding-left: 20rem;
+  padding-right: 20rem;
 }
-#root #content .view-container .view-block .view-desc h2 {
-  margin-top: 20px;
-  font-size: 20px;
+.view-container .view-block .view-desc h2 {
+  margin-top: 20rem;
+  font-size: 20rem;
   color: #313131;
 }
-#root #content .view-container .view-block .view-desc ul {
-  padding-left: 20px;
+.view-container .view-block .view-desc ul {
+  padding-left: 20rem;
   list-style-type: none;
 }
-#root #content .view-container .view-block .view-desc ul li {
-  font-size: 14px;
+.view-container .view-block .view-desc ul li {
+  font-size: 14rem;
   color: #424242;
   font-family: monaco, Consolas, Lucida Console, monospace;
 }
-#root #content .view-container .view-list {
-  width: 120px;
-  padding-left: 10px;
+
+.view-list {
+  width: 120rem;
+  padding-left: 10rem;
   display: none;
   flex-direction: column;
-  gap: 10px;
+  gap: 10rem;
 }
-#root #content .view-container .view-list img {
+.view-list img {
   display: block;
-  border: white 3px solid;
-  border-radius: 10px;
-  box-shadow: rgb(0, 0, 0) 0px 0px 1px 0px;
+  border: white 3rem solid;
+  border-radius: 10rem;
+  box-shadow: rgb(0, 0, 0) 0rem 0rem 1rem 0rem;
   cursor: pointer;
   transition-duration: 100ms;
   transition-property: scale;
 }
-#root #content .view-container .view-list img.active {
-  box-shadow: rgb(0, 0, 0) 0px 0px 0px 2px;
+.view-list img.active {
+  box-shadow: rgb(0, 0, 0) 0rem 0rem 0rem 2rem;
 }
-#root #content .view-container .view-list img:hover {
+.view-list img:hover {
   scale: 1.05;
 }
 
