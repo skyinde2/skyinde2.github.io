@@ -1,4 +1,5 @@
 "use strict";
+var _a;
 const playPauseObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         const video = entry.target;
@@ -40,11 +41,12 @@ for (const container of containers) {
     const list = container.getElementsByClassName("view-list")[0];
     const video = block.getElementsByTagName("video")[0];
     const image = block.getElementsByTagName("img")[0];
-    const first = list.firstElementChild;
+    const first = (_a = list.firstElementChild) === null || _a === void 0 ? void 0 : _a.firstElementChild;
     const videoSrc = getVideoSrc(first.src);
     if (videoSrc) {
         video.style.display = "block";
         video.src = videoSrc;
+        video.poster = first.src;
     }
     else {
         image.style.display = "block";
@@ -56,7 +58,7 @@ for (const container of containers) {
         let selected = first;
         selected.classList.add("active");
         for (const child of list.children) {
-            const childImage = child;
+            const childImage = child.firstElementChild;
             const videoSrc = getVideoSrc(childImage.src);
             childImage.onclick = () => {
                 if (selected != childImage) {
@@ -65,6 +67,7 @@ for (const container of containers) {
                         video.style.display = "block";
                         image.style.display = "none";
                         video.src = videoSrc;
+                        video.poster = childImage.src;
                         if (replay) {
                             if (video.readyState >= 2) {
                                 video.play();

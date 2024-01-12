@@ -191,7 +191,11 @@ body {
   flex-direction: column;
   gap: 10rem;
 }
-.view-list img {
+.view-list div {
+  position: relative;
+}
+.view-list img:not(.video-icon) {
+  width: 100%;
   display: block;
   border: white 3rem solid;
   border-radius: 10rem;
@@ -200,11 +204,19 @@ body {
   transition-duration: 100ms;
   transition-property: scale;
 }
-.view-list img.active {
+.view-list img:not(.video-icon).active {
   box-shadow: rgb(0, 0, 0) 0rem 0rem 0rem 2rem;
 }
-.view-list img:hover {
+.view-list img:not(.video-icon):hover {
   scale: 1.05;
+}
+.view-list .video-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40rem;
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=main.css.map */
