@@ -61,9 +61,21 @@ for (const container of containers) {
             childImage.onclick = () => {
                 if (selected != childImage) {
                     if (videoSrc) {
+                        const replay = video.style.display == "block";
                         video.style.display = "block";
                         image.style.display = "none";
                         video.src = videoSrc;
+                        if (replay) {
+                            if (video.readyState >= 2) {
+                                video.play();
+                            }
+                            else {
+                                video.oncanplay = () => {
+                                    video.play();
+                                    video.oncanplay = null;
+                                };
+                            }
+                        }
                     }
                     else {
                         video.style.display = "none";

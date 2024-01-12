@@ -6,7 +6,7 @@
     <script src="/js/view.js" defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Portfolio</title>
   </head>
   <body>
     
@@ -14,7 +14,7 @@
       <div id="tab">
         <div id="welcome">
           <p>Hi, I'm Liyang Chen.</p>
-          <p>This page showcases some of my past work as a mobile game developer.</p>
+          <p>This page showcases some work I have done as a game developer.</p>
         </div>
         <div class="tabButton">
           <p>Rendering</p><img src='/assets/rendering.png' />
@@ -44,7 +44,7 @@
         type="video/mp4"></video>
     </div>
     <div class="view-desc">
-<h2>Kart Decal</h2>
+<h2>Cached Decals</h2>
 <ul>
 <li>
 <p>User customizable car decals.</p>
@@ -55,7 +55,7 @@
 </ul>
 </div>
 <div class="view-container">
-  <div class="view-block">
+  <div class="view-block fixed-size">
     <div>
       <img>
       <video
@@ -65,34 +65,13 @@
         type="video/mp4"></video>
     </div>
     <div class="view-desc">
-<h2>Optimized Blob Shadow</h2>
+<h2>Shadowing</h2>
 <ul>
 <li>
-<p>Works like a projector without flickering on uneven surfaces. The mesh for rendering is dynamically generated to reduce overdraw.</p>
+<p>Includes techniques such as optimized blob shadow and capsule shadow that eliminate the need for shadow maps, enhancing performance and enabling special effects.</p>
   </div>
 </div>
-<div class="view-list"><img src="assets/poster_blob.webp"></div>
-</li>
-</ul>
-</div>
-<div class="view-container">
-  <div class="view-block">
-    <div>
-      <img>
-      <video
-        loop
-        muted
-        playsinline
-        type="video/mp4"></video>
-    </div>
-    <div class="view-desc">
-<h2>Capsule Shadow</h2>
-<ul>
-<li>
-<p>Simulates the effect of spotlight shadows within a stadium for enhanced performance and visual representation.</p>
-  </div>
-</div>
-<div class="view-list"><img src="assets/poster_capsule.webp"></div>
+<div class="view-list"><img src="assets/poster_blob.webp"><img src="assets/poster_capsule.webp"></div>
 </li>
 </ul>
 </div>
@@ -110,7 +89,7 @@
 <h2>Crowd Rendering</h2>
 <ul>
 <li>
-<p>Bakes animation data into texture array and makes skinning calculation in shader.</p>
+<p>Animation data is baked into a texture array, allowing skinning calculations to be performed directly within the shader.</p>
   </div>
 </div>
 <div class="view-list"><img src="assets/crowd.webp"></div>
@@ -152,7 +131,7 @@
 <h2>Post Processing</h2>
 <ul>
 <li>
-<p>Includes some mobile-optimized post effects such as depth of field, radial blur, bloom, and LUT, filling in for missing features in earlier versions of Unity.</p>
+<p>Includes mobile-optimized post effects such as depth of field, radial blur, bloom, and LUT, filling in for missing features in earlier versions of Unity.</p>
   </div>
 </div>
 <div class="view-list"><img src="assets/postprocess.webp"></div>
@@ -174,10 +153,31 @@
         type="video/mp4"></video>
     </div>
     <div class="view-desc">
+<h2>Batch Rendering</h2>
+<ul>
+<li>
+<p>Utilizes Unity's Command Buffer for manual rendering control. Additionally, a custom native plugin handles the rendering of objects on Android, minimizing GLES call overhead.</p>
+  </div>
+</div>
+<div class="view-list"><img src="assets/instance.webp"></div>
+</li>
+</ul>
+</div>
+<div class="view-container">
+  <div class="view-block">
+    <div>
+      <img>
+      <video
+        loop
+        muted
+        playsinline
+        type="video/mp4"></video>
+    </div>
+    <div class="view-desc">
 <h2>Mesh LOD</h2>
 <ul>
 <li>
-<p>Some simplified models are generated at runtime after merging the meshes of user-customizable parts into a single one for batch reduction.</p>
+<p>Simplified models are generated at runtime after merging the meshes of user-customizable parts.</p>
   </div>
 </div>
 <div class="view-list"><img src="assets/lod.webp"></div>
@@ -185,49 +185,7 @@
 </ul>
 </div>
 <div class="view-container">
-  <div class="view-block">
-    <div>
-      <img>
-      <video
-        loop
-        muted
-        playsinline
-        type="video/mp4"></video>
-    </div>
-    <div class="view-desc">
-<h2>Instance rendering</h2>
-<ul>
-<li>
-<p>Additionally, objects are rendered through a custom native plugin on Android to minimize GLES call overhead introduced by Unity.</p>
-  </div>
-</div>
-<div class="view-list"><img src="assets/instance.webp"></div>
-</li>
-</ul>
-</div>
-<!-- 
-
-<div class="view-container">
-  <div class="view-block">
-    <div>
-      <img>
-      <video
-        loop
-        muted
-        playsinline
-        type="video/mp4"></video>
-    </div>
-    <div class="view-desc">
-      
-## Skinning Optimization
-- aaa
-
-    </div>
-  </div>
-  <div class="view-list"><img src="assets/instance.webp"></div>
-</div> -->
-<div class="view-container">
-  <div class="view-block">
+  <div class="view-block fixed-size">
     <div>
       <img>
       <video
@@ -240,15 +198,13 @@
 <h2>Occlusion Culling</h2>
 <ul>
 <li>
-<p>aaa</p>
+<p>Includes offline triangles culling based on camera range and a comprehensive PVS (Potentially Visible Set) solution specifically developed for racetrack scenes.</p>
   </div>
 </div>
-<div class="view-list"><img src="assets/poster_pvs.webp"><img src="assets/pvs.webp"></div>
+<div class="view-list"><img src="assets/poster_pvs.webp"><img src="assets/cull0.webp"><img src="assets/cull1.webp"></div>
 </li>
 </ul>
 </div>
-<!-- 
-
 <div class="view-container">
   <div class="view-block">
     <div>
@@ -260,18 +216,18 @@
         type="video/mp4"></video>
     </div>
     <div class="view-desc">
-      
-## Mesh Re
-- aaa
-
-    </div>
+<h2>Skinning Optimization</h2>
+<ul>
+<li>
+<p>Specifically optimized for dual-issue execution on Cortex-A53 and Cortex-A55, which are commonly used ARM LITTLE cores in Android devices.</p>
   </div>
-  <div class="view-list"><img src="assets/pvs.webp"></div>
-</div> -->
-<!-- 
-
+</div>
+<div class="view-list"><img src="assets/skinning.webp"></div>
+</li>
+</ul>
+</div>
 <div class="view-container">
-  <div class="view-block">
+  <div class="view-block fixed-size">
     <div>
       <img>
       <video
@@ -281,14 +237,16 @@
         type="video/mp4"></video>
     </div>
     <div class="view-desc">
-      
-## Video Player
-- aaa
-
-    </div>
+<h2>Custom Video Player</h2>
+<ul>
+<li>
+<p>A video player based on FFmpeg, meticulously optimized for memory usage, resulting in a significantly smaller memory footprint compared to Unity's built-in player and other commercial offerings.</p>
   </div>
-  <div class="view-list"><img src="assets/pvs.webp"></div>
-</div> -->
+</div>
+<div class="view-list"><img src="assets/player0.webp"><img src="assets/player1.webp"></div>
+</li>
+</ul>
+</div>
 </div>
 <div id="tooling" class="section">
 <div class="section-bg"></div>
@@ -304,13 +262,13 @@
         type="video/mp4"></video>
     </div>
     <div class="view-desc">
-<h2>Scene Atlas Tool</h2>
+<h2>Deep Profiling</h2>
 <ul>
 <li>
-<p>Offline merges scene textures into atlases to optimize rendering performance.</p>
+<p>Utilizes a custom-implemented stack sampling method for deep profiling (different from statistical profiling) on mobile devices, which allows efficient identification of performance hitches.</p>
   </div>
 </div>
-<div class="view-list"><img src="assets/atlas0.webp"><img src="assets/atlas1.webp"></div>
+<div class="view-list"><img src="assets/poster_deep.webp"></div>
 </li>
 </ul>
 </div>
@@ -325,13 +283,34 @@
         type="video/mp4"></video>
     </div>
     <div class="view-desc">
-<h2>Collider Debugger</h2>
+<h2>Managed Heap Profiler</h2>
 <ul>
 <li>
-<p>Assists in identifying collider-related issues and making optimizations.</p>
+<p>Works for Unity IL2CPP and tracks all events on the managed heap with detail, enabling effective identification of memory issues. Designed for high performance, it is capable of handling tens of millions of events.</p>
   </div>
 </div>
-<div class="view-list"><img src="assets/collider0.webp"><img src="assets/collider1.webp"></div>
+<div class="view-list"><img src="assets/poster_heap.webp"></div>
+</li>
+</ul>
+</div>
+<div class="view-container">
+  <div class="view-block fixed-size">
+    <div>
+      <img>
+      <video
+        loop
+        muted
+        playsinline
+        type="video/mp4"></video>
+    </div>
+    <div class="view-desc">
+<h2>Performance Trending</h2>
+<ul>
+<li>
+<p>Web-based data visualization which integrates seamlessly with automated testing, aiding in data comparison and analysis to address performance issues.</p>
+  </div>
+</div>
+<div class="view-list"><img src="assets/trending0.webp"><img src="assets/trending1.webp"></div>
 </li>
 </ul>
 </div>
@@ -349,7 +328,7 @@
 <h2>Scene Scanner</h2>
 <ul>
 <li>
-<p>Automatically scans track scenes and generates rendering-related statistical data, assisting in identifying performance bottlenecks.</p>
+<p>Automatically profiles racetrack scenes to generate rendering performance statistics, pinpointing graphics bottlenecks.</p>
   </div>
 </div>
 <div class="view-list"><img src="assets/poster_scan.webp"></div>
@@ -367,20 +346,18 @@
         type="video/mp4"></video>
     </div>
     <div class="view-desc">
-<h2>Deep Profiling</h2>
+<h2>Atlas Tool</h2>
 <ul>
 <li>
-<p>Utilizes a custom-implemented stack sampling method for deep profiling (different from statistical profiling) on mobile devices, enabling easy identification of performance hitches.</p>
+<p>Merges scene textures into atlases offline to enhance rendering performance.</p>
   </div>
 </div>
-<div class="view-list"><img src="assets/deep0.webp"><img src="assets/deep1.webp"></div>
+<div class="view-list"><img src="assets/atlas.webp"></div>
 </li>
 </ul>
 </div>
-<!-- 
-
 <div class="view-container">
-  <div class="view-block">
+  <div class="view-block fixed-size">
     <div>
       <img>
       <video
@@ -390,28 +367,15 @@
         type="video/mp4"></video>
     </div>
     <div class="view-desc">
-      
-## Managed Heap Profiler
-
-    </div>
+<h2>Collider Debugger</h2>
+<ul>
+<li>
+<p>Helps diagnose physics collider issues and optimize collider configurations for improved performance.</p>
   </div>
-  <div class="view-list"><img src="assets/tp2.webp"></div>
-</div> -->
-<div class="view-container">
-  <div class="view-block">
-    <div>
-      <img>
-      <video
-        loop
-        muted
-        playsinline
-        type="video/mp4"></video>
-    </div>
-    <div class="view-desc">
-<h2>Performance Trending</h2>
-<p></div></p>
-  </div>
-  <div class="view-list"><img src="assets/trending0.webp"><img src="assets/trending1.webp"></div>
+</div>
+<div class="view-list"><img src="assets/collider0.webp"><img src="assets/collider1.webp"></div>
+</li>
+</ul>
 </div>
 </div>
 <div id="pipeline" class="section">
@@ -428,10 +392,36 @@
         type="video/mp4"></video>
     </div>
     <div class="view-desc">
-<h2>Procedural</h2>
-<p></div></p>
+<h2>Render Pipeline Management</h2>
+<ul>
+<li>
+<p>Enhanced and optimized the pipeline's rendering features according to requirements, while maintaining performance efficiency.</p>
   </div>
-  <div class="view-list"><img src="assets/procedural0.webp"><img src="assets/procedural1.webp"></div>
+</div>
+<div class="view-list"><img src="assets/pipeline.webp"></div>
+</li>
+</ul>
+</div>
+<div class="view-container">
+  <div class="view-block fixed-size">
+    <div>
+      <img>
+      <video
+        loop
+        muted
+        playsinline
+        type="video/mp4"></video>
+    </div>
+    <div class="view-desc">
+<h2>Procedural Generation</h2>
+<ul>
+<li>
+<p>Created pipelines using Substance and Houdini for procedural world generation, including terrain sculpting, road network generation, and object scattering.</p>
+  </div>
+</div>
+<div class="view-list"><img src="assets/procedural0.webp"><img src="assets/procedural1.webp"></div>
+</li>
+</ul>
 </div>
 </div>
       </div>
